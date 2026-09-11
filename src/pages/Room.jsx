@@ -1,3 +1,4 @@
+import WatchProviders from "../components/WatchProviders";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
@@ -98,9 +99,12 @@ function Room() {
     <div className="room">
       {latestMatch && (
         <div className="match-banner">
-          🎉 Match: <strong>{latestMatch.movie.title}</strong>!
-        </div>
-      )}
+            <p>
+                🎉 Match: <strong>{latestMatch.movie.title}</strong>!
+                </p>
+                <WatchProviders movieId={latestMatch.movie.id} />
+                </div>
+            )}
 
       <div className="room-header">
         <h1>🎬 Movie Night Matcher</h1>
