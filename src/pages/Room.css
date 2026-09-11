@@ -101,6 +101,11 @@
   margin-bottom: 20px;
   font-size: 15px;
   text-align: center;
+  max-width: 400px;
+}
+
+.match-banner p {
+  margin: 0 0 4px;
 }
 
 .results {
