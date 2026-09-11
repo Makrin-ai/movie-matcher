@@ -1,0 +1,165 @@
+.room {
+  min-height: 100vh;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.room-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.room-header h1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.room-code {
+  color: #999;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.member-count {
+  color: #888;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 10px 24px;
+  border-radius: 20px;
+  border: none;
+  background: #1a1a22;
+  color: #888;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab.active {
+  background: #e63946;
+  color: white;
+}
+
+.card-stack {
+  margin-bottom: 8px;
+}
+
+.swipe-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn.dislike {
+  background: #2a2a33;
+  color: #f2f2f2;
+}
+
+.btn.like {
+  background: #e63946;
+  color: white;
+}
+
+.progress {
+  margin-top: 16px;
+  color: #888;
+  font-size: 14px;
+}
+
+.status {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 18px;
+}
+
+.match-banner {
+  background: linear-gradient(135deg, #e63946, #f4a261);
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.results {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.result-row {
+  display: flex;
+  gap: 12px;
+  background: #1a1a22;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.result-row.matched {
+  border: 1px solid #e63946;
+}
+
+.result-poster {
+  width: 60px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.result-info {
+  flex: 1;
+}
+
+.result-info h3 {
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+
+.result-votes {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  align-items: center;
+}
+
+.vote-count {
+  font-weight: 600;
+}
+
+.vote-count.like {
+  color: #e63946;
+}
+
+.vote-count.dislike {
+  color: #666;
+}
+
+.vote-count.total {
+  color: #888;
+  font-weight: 400;
+  font-size: 12px;
+}
