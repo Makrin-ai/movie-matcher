@@ -2,9 +2,6 @@
 
 Swipe through movies with friends in real time until everyone matches on something to watch — no more endless "what do you want to watch" debates.
 
-## Live Demo
-
-[movie-night-matcher.vercel.app](#) *(coming soon)*
 
 ## Features
 
