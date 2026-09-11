@@ -13,3 +13,24 @@ export async function fetchPopularMovies() {
   const pages = await Promise.all(pageRequests);
   return pages.flatMap((page) => page.results);
 }
+export async function fetchWatchProviders(movieId, region = "US") {
+  const response = await fetch(
+    `${BASE_URL}/movie/${movieId}/watch/providers?api_key=${API_KEY}`
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch watch providers");
+  }
+
+  const data = await response.json();
+  const regionData = data.results?.[region];
+
+  if (!regionData) return { flatrate: [], rent: [], buy: [], link: null };
+
+  return {
+    flatrate: regionData.flatrate || [],
+    rent: regionData.rent || [],
+    buy: regionData.buy || [],
+    link: regionData.link || null,
+  };
+}
