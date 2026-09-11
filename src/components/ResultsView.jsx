@@ -1,3 +1,5 @@
+import WatchProviders from "./WatchProviders";
+
 function ResultsView({ movies, memberCount, votes }) {
   const movieVotes = {};
   votes.forEach((vote) => {
@@ -46,6 +48,7 @@ function ResultsView({ movies, memberCount, votes }) {
                 <span className="vote-count dislike">👎 {dislikeCount}</span>
                 <span className="vote-count total">out of {memberCount} in room</span>
               </div>
+              {isMatch && <WatchProviders movieId={movie.id} />}
             </div>
           </div>
         );
